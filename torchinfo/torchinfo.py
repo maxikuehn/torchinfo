@@ -185,6 +185,7 @@ def summary(
                 See torchinfo/model_statistics.py for more information.
     """
     input_data_specified = input_data is not None or input_size is not None
+    columns: tuple[ColumnSettings, ...]
     if col_names is None:
         columns = (
             DEFAULT_COLUMN_NAMES
@@ -514,7 +515,7 @@ def get_total_memory_used(data: CORRECTED_INPUT_DATA_TYPE) -> int:
             else sum
         ),
     )
-    return cast(int, result)
+    return cast("int", result)
 
 
 def get_input_tensor(
