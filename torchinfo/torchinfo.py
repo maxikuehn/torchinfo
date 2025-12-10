@@ -166,6 +166,7 @@ def summary(
                     "ascii_only",
                     "depth",
                     "var_names",
+                    "hide_recursive_layers",
                 )
                 Default: ("depth",)
 
